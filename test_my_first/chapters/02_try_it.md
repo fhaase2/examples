@@ -1,4 +1,4 @@
-## Try it Out!
+## Try it out!
 
 ### With Docker
 
@@ -10,9 +10,7 @@ docker run -p 45678:45678 jinaai/hub.app.distilbert-southpark
 
 Check out more details about the Docker image [here](rest-api/README.md).
 
-Note: You'll need to run the Docker image before trying the steps below
-
-#### Querying with Jinabox
+#### Testing with Jinabox
 
 1. Go to [jinabox](https://jina.ai/jinabox.js) in your browser
 2. Ensure you have the server endpoint set to `http://localhost:45678/api/search`
@@ -20,10 +18,28 @@ Note: You'll need to run the Docker image before trying the steps below
 
 Find out more about [jinabox.js](https://github.com/jina-ai/jinabox.js/), including how to use the front-end code in your own project.
 
-#### Querying with `curl`
+#### Testing with Curl
 
 Alternatively, you can open your shell and check the results via the RESTful API. The matched results are stored in `topkResults`.
 
 ```bash
 curl --request POST -d '{"top_k": 10, "mode": "search",  "data": ["text:hey, dude"]}' -H 'Content-Type: application/json' 'http://0.0.0.0:45678/api/search'
 ```
+
+### From a Repository
+
+When you cloned this repository it came with a demo. You can try it out with:
+
+```bash
+python app.py -t index -n 10000
+```
+
+To index the South Park scripts
+
+or
+
+```bash
+python app.py -t query
+```
+
+To query them

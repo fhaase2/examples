@@ -24,7 +24,7 @@ Or, in a more human-readable format:
 | 10     | 1       | Stan      | "Forever.                               | 
 | 10     | 1       | Chef      | "I'm sorry boys.                        | 
 
-Now let's ensure we're back in our repo's base folder (from the repo you cloned, *not* the `south_park` folder) and get this dataset by running:
+Now let's ensure we're in our repo's base folder (tutorial) and get this dataset by running:
 
 ```bash
 bash ./get_data.sh
