@@ -45,7 +45,7 @@ import numpy as np
 from jina.flow import Flow
 input_data = np.random.random((3,8))
 f = Flow().add(uses='_logforward')
-with [f](f):
+with f:
     f.index_ndarray(input_data)
 ```
     
